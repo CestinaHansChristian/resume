@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/output.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+    <link rel="icon" href="../assets/icon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=WDXL+Lubrifont+SC&display=swap" rel="stylesheet">
+    <title>My Portfolio</title>
+    <style>
+        .huninn-regular {
+            font-family: "Huninn", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }      
+
+          .wdxl-lubrifont-sc-regular {
+            font-family: "WDXL Lubrifont SC", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+          }
+    </style>
+</head>
+<body>
+    <div id="loader" class="fixed inset-0 bg-gray-500 flex items-center justify-center z-50 transition-opacity duration-700">
+        <div class="w-16 h-16 border-4 border-gray-300 border-t-blue-500 rounded-full animate-spin"></div>
+    </div>
+    <header class="flex top-0 z-20 sticky justify-between text-3xl font-[Huninn] text-black h-16 bg-white">
+        <div class="icon-wrapper relative px-2 tracking-wide pt-3">
+            <div class="branding-wrapper m-1 absolute">
+                <div class="branding-value hover:text-4xl delay-150 duration-150 ease-in cursor-pointer">
+                   <a href="#" class="font-[900] font-[WDXL Lubrifont SC]">Hans</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-wrapper flex">
+            <!-- Hamburger Icon (Only one should exist) -->
+            <div class="hamburger-icon-wrapper grid items-center pe-2 md:hidden">
+                <button id="menu-toggle" class="flex flex-col justify-between w-8 h-6 group cursor-pointer">
+                <span class="h-1 bg-black rounded group-hover:bg-blue-500 transition-all duration-300"></span>
+                <span class="h-1 bg-black rounded group-hover:bg-blue-500 transition-all duration-300"></span>
+                <span class="h-1 bg-black rounded group-hover:bg-blue-500 transition-all duration-300"></span>
+                </button>
+            </div>
+  
+            <!-- Mobile Menu (Hidden by default) -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white py-2 shadow-md relative text-sm">
+                <div class="absolute right-0 z-10 mt-14 w-36 rounded-sm bg-white shadow-lg ring-1 ring-black/5 focus:outline-hidden" role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1">
+                    <div class="" role="none">
+                      <a href="#home" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-300" role="menuitem" tabindex="-1" id="menu-item-0">Home</a>
+                      <a href="#project2" class="block px-4 py-2 text-sm text-gray-700 hover:bg-slate-300" role="menuitem" tabindex="-1" id="menu-item-1">Projects</a>
+                    </div>
+                  </div>
+            </div>
+        </div>
+        <div class="hidden navigation-icons-wrapper md:grid items-center group *:text-slate-700/75">
+            <ul class="flex gap-x-8 px-4 text-sm items-center">
+                <li class="transition-colors duration-300 ease-in-out hover:text-blue-500/80 hover:underline">
+                  <a href="#home">Home</a>
+                </li>
+                <li class="transition-colors duration-300 ease-in-out hover:text-blue-500/80 hover:underline">
+                  <a href="#projects">Projects</a>
+                </li>
+              </ul>              
+        </div>
+    </header>
+    <!-- first content -->
+    <div class="content relative" id="home">
+        <div class="content-section relative bg-slate-300 grid-cols-3 lg:place-content-center">
+            <div class="md:hidden bg-drop h-full grid place-content-center pb-32 md:pb-0 relative">
+                <div class="cta-wrapper space-y-10 font-[Huninn] pt-20">
+                    <div class="short-description w-60 text-sm">
+                        Hi, I'm <span class="text-purple-400 font-bold">Hans</span>. A developer passionate about building scalable
+                            and effective solutions, producing high-quality
+                            software with cross-platform functionality. An
+                            aspiring pen tester who incorporates different
+                            techniques in testing system vulnerabilities    
+                    </div>
+                    <div class="wrapper space-x-2 font-medium">
+                        <a href="#projects">
+                            <button type="submit" class="cursor-pointer btn-wrapper outline-2 rounded-4xl bg-blue-500/80 outline-blue-800/45 p-1 px-2 font-[700] hover:bg-blue-400/80 hover:outline-blue-400 tracking-widest hover:text-slate-100 delay-150 ease-in-out duration-150 shadow-xl">
+                                See my work
+                            </button>
+                        </a>
+                        <a href="https://drive.google.com/file/d/16d9jPxdfydKzCZ2AMATGdQTxsuuNtru3/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                            <button type="submit" class="cursor-pointer btn-wrapper outline-2 rounded-4xl bg-amber-500/80 outline-amber-800/45 p-1 px-2 font-[700] hover:bg-amber-400/80 hover:outline-amber-400 tracking-widest hover:text-slate-100 delay-150 ease-in-out duration-150 shadow-xl">
+                                My resume
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="bottom-line-divider absolute bottom-0 w-full h-24 bg-amber-200 grid place-content-center" ></div>
+                    
+                </div>
+            </div>
+            <!-- medium screens -->
+            <div class="hidden content h-screen md:grid grid-rows-3">
+                <div class="top-container-with-cta row-span-2 relative">
+                    <div class="image-wrapper sm:h-60  absolute bottom-0 md:translate-x-11 lg:translate-x-44 xl:translate-x-[200px] md:h-72 lg:h-80 xl:h-96">
+                        <img src="../assets//profile.png" alt="" class="object-contain h-full w-full">
+                    </div>
+                    <div class="cta-with-description absolute bottom-32 translate-x-80 lg:translate-x-[500px] xl:bottom-40 xl:translate-x-[700px] font-[Huninn] grid grid-rows-1 gap-y-5">
+                        <div class="short-description w-60 text-sm md:text-base md:w-96 lg:text-xl xl:w-[500px] tracking-wide">
+                            Hi, I'm <span class="text-purple-400 font-bold">Hans</span>. A developer passionate about building scalable
+                            and effective solutions, producing high-quality
+                            software with cross-platform functionality. An
+                            aspiring pen tester who incorporates different
+                            techniques in testing system vulnerabilities
+                        </div>
+                        <div class="wrapper md:space-x-2">
+                            <a href="#projects">
+                                <button type="submit" class="cursor-pointer btn-wrapper outline-2 rounded-4xl bg-blue-500/80 outline-blue-800/45 p-2 px-5 text-xl font-[700] hover:bg-blue-400/80 hover:outline-blue-400 tracking-widest hover:text-slate-100 delay-150 ease-in-out duration-150 shadow-xl">
+                                    See my work
+                                </button>
+                            </a>
+                            <a href="https://drive.google.com/file/d/16d9jPxdfydKzCZ2AMATGdQTxsuuNtru3/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+                                <button type="submit" class="cursor-pointer btn-wrapper outline-2 rounded-4xl bg-amber-500/80 outline-amber-800/45 p-2 px-5 text-xl font-[700] hover:bg-amber-400/80 hover:outline-amber-400 tracking-widest hover:text-slate-100 delay-150 ease-in-out duration-150 shadow-xl">
+                                    My resume
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-line-divider w-full bg-amber-200 h-full relative grid place-content-center" >
+                    <div class="bouncing-ball pt-5">
+                        <a href="#projects">
+                            <div class="ball-icon h-14 w-14 bg-slate-400/50 rounded-full animate-bounce grid place-content-center hover:bg-slate-400">
+                                <!-- icon -->
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                                  </svg>                              
+                            </div>
+                        </a>
+                    </div>
+                    <div class="ref" id="projects"></div>
+                </div>
+            </div>
+        </div>
+        <div class="" id="project2"></div>
+        <div class="content-section w-full h-full bg-stone-600/60 grid place-content-center">
+            <div class="grid-container relative">
+                <div class="containers">
+                    <div class="heading-wrapper font-[700] md:text-4xl p-5 text-center font-[huninn] bg-white">
+                        My Projects
+                    </div>
+                    <div class="row-container relative">
+                        <div class="project-card font-[Huninn] grid lg:grid-cols-2 xl:grid-cols-3 grid-flow-row gap-5 m-5 md:m-10">
+                            <!-- first col -->
+                            <div class="card bg-slate-400/60 flex gap-x-5 shadow-md hover:outline-white/50 hover:outline-2 p-5 rounded-2xl group hover:bg-black/30">
+                                <div class="icon-wrapper flex items-start md:items-center lg:items-start">
+                                    <div class="content-col group-hover:outline-white/50">
+                                        <a href="#NoAvailableCopyInRepository" target="_blank" rel="noopener noreferrer">
+                                            <img src="../assets/github.png" alt="" class="h-24 w-96 object-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="wrapper grid">
+                                    <div class="project-title group-hover:text-white">
+                                        <div class="title-wrapper text-slate-700/75 group-hover:text-white/55">
+                                            Title
+                                        </div>
+                                        <div class="title-value">
+                                            POS: Croissant French Bakery
+                                        </div>
+                                    </div>
+                                    <div class="description-wrapper group-hover:text-white">
+                                        <div class="description text-slate-700/75 group-hover:text-white/55">
+                                            Description:
+                                        </div>
+                                        <div class="description-wrapper">
+                                            POS French Bakery is a desktop-based Point of Sale (POS) system developed using Java and built upon core Object-Oriented Programming (OOP) principles.
+                                             Designed specifically for bakery operations, the system manages sales transactions, product inventory, order processing, and daily reports    
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <!-- second col -->
+                            <div class="card bg-slate-400/60 flex gap-x-5 shadow-md hover:outline-white/50 hover:outline-2 p-5 rounded-2xl group hover:bg-black/30">
+                                <div class="icon-wrapper flex items-start md:items-center lg:items-start">
+                                    <div class="content-col group-hover:outline-white/50">
+                                        <a href="https://github.com/CestinaHansChristian/ChatApp-IT114-Practical" target="_blank" rel="noopener noreferrer">
+                                            <img src="../assets/github.png" alt="" class="h-24 w-96 object-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="wrapper grid gap-y-3">
+                                    <div class="project-title group-hover:text-white">
+                                        <div class="title-wrapper text-slate-700/75 group-hover:text-white/55">
+                                            Title
+                                        </div>
+                                        <div class="title-value">
+                                            weMeet: Online realtime ChatApp using socket.io
+                                        </div>
+                                    </div>
+                                    <div class="description-wrapper group-hover:text-white">
+                                        <div class="description text-slate-700/75 group-hover:text-white/55">
+                                            Description:
+                                        </div>
+                                        <div class="description-wrapper">
+                                            weMeet is an online real-time chat application built with Socket.IO, designed to enable seamless and instant communication between users.
+                                            The use of Socket.IO ensures low-latency communication and scalable event-driven architecture, making it ideal for social collaboration platform.    
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <!-- third col -->
+                            <div class="card bg-slate-400/60 flex gap-x-5 shadow-md hover:outline-white/50 hover:outline-2 p-5 rounded-2xl group hover:bg-black/30">
+                                <div class="icon-wrapper flex items-start md:items-center lg:items-start">
+                                    <div class="content-col group-hover:outline-white/50">
+                                        <a href="https://github.com/CestinaHansChristian/IT120-re" target="_blank" rel="noopener noreferrer">
+                                            <img src="../assets/github.png" alt="" class="h-24 w-96 object-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="wrapper grid gap-y-3">
+                                    <div class="project-title group-hover:text-white">
+                                        <div class="title-wrapper text-slate-700/75 group-hover:text-white/55">
+                                            Title
+                                        </div>
+                                        <div class="title-value">
+                                            Desktop App: Minimart
+                                        </div>
+                                    </div>
+                                    <div class="description-wrapper group-hover:text-white">
+                                        <div class="description text-slate-700/75 group-hover:text-white/55">
+                                            Description:
+                                        </div>
+                                        <div class="description-wrapper">
+                                            MiniMart is a desktop-based retail management application developed using VB.NET, designed to streamline everyday store operations for small to medium-sized convenience shops. 
+                                            The system supports full CRUD functionality (Create, Read, Update, Delete), enabling efficient management of products, categories, customers, and transactions.    
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <!-- fourth col -->
+                            <div class="card bg-slate-400/60 flex gap-x-5 shadow-md hover:outline-white/50 hover:outline-2 p-5 rounded-2xl group hover:bg-black/30">
+                                <div class="icon-wrapper flex items-start md:items-center lg:items-start">
+                                    <div class="content-col group-hover:outline-white/50">
+                                        <a href="https://github.com/CestinaHansChristian/e-commerce2024" target="_blank" rel="noopener noreferrer">
+                                            <img src="../assets/github.png" alt="" class="h-24 w-96 object-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="wrapper grid gap-y-3">
+                                    <div class="project-title group-hover:text-white">
+                                        <div class="title-wrapper text-slate-700/75 group-hover:text-white/55">
+                                            Title
+                                        </div>
+                                        <div class="title-value">
+                                            Daily Farm: A web-based ecommerce app
+                                        </div>
+                                    </div>
+                                    <div class="description-wrapper group-hover:text-white">
+                                        <div class="description text-slate-700/75 group-hover:text-white/55">
+                                            Description:
+                                        </div>
+                                        <div class="description-wrapper">
+                                            An online e-commerce platform specializing in fresh, high-quality dairy products delivered directly to customers’ homes. 
+                                            The platform offers a wide range of items, including milk, yogurt, butter, cheese, and more — all sourced from trusted local farms.    
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <!-- fifth col -->
+                            <div class="card bg-slate-400/60 flex gap-x-5 shadow-md hover:outline-white/50 hover:outline-2 p-5 rounded-2xl group hover:bg-black/30">
+                                <div class="icon-wrapper flex items-start md:items-center lg:items-start">
+                                    <div class="content-col group-hover:outline-white/50">
+                                        <a href="https://github.com/CestinaHansChristian/butc-lib" target="_blank" rel="noopener noreferrer">
+                                            <img src="../assets/github.png" alt="" class="h-24 w-96 object-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="wrapper gap-y-3">
+                                    <div class="project-title group-hover:text-white">
+                                        <div class="title-wrapper text-slate-700/75 group-hover:text-white/55">
+                                            Title
+                                        </div>
+                                        <div class="title-value">
+                                            BUTC Library System
+                                        </div>
+                                    </div>
+                                    <div class="description-wrapper group-hover:text-white">
+                                        <div class="description text-slate-700/75 group-hover:text-white/55">
+                                            Description:
+                                        </div>
+                                        <div class="description-wrapper">
+                                            a digital library management platform designed to streamline academic resource access and administration.
+                                             The system allows users to browse, borrow, and read eBooks online, while administrators can efficiently manage the eBook catalog through a secure admin portal. 
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                            <!-- sixth col -->
+                            <div class="card bg-slate-400/60 flex gap-x-5 shadow-md hover:outline-white/50 hover:outline-2 p-5 rounded-2xl group hover:bg-black/30">
+                                <div class="icon-wrapper flex items-start md:items-center lg:items-start">
+                                    <div class="content-col group-hover:outline-white/50">
+                                        <a href="https://github.com/CestinaHansChristian/BUpms" target="_blank" rel="noopener noreferrer">
+                                            <img src="../assets/github.png" alt="" class="h-24 w-96 object-contain">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="wrapper grid">
+                                    <div class="project-title group-hover:text-white">
+                                        <div class="title-wrapper text-slate-700/75 group-hover:text-white/55">
+                                            Title
+                                        </div>
+                                        <div class="title-value">
+                                            BUpms: A web-based project management for BUOSAS
+                                        </div>
+                                    </div>
+                                    <div class="description-wrapper group-hover:text-white">
+                                        <div class="description text-slate-700/75 group-hover:text-white/55">
+                                            Description:
+                                        </div>
+                                        <div class="description-wrapper">
+                                            A user-friendly web app for BUOSAS that simplifies project management and document handling — letting users submit projects, upload and track documents, get notifications, and manage accounts, all from any device.
+                                        </div>
+                                    </div>
+                               </div>
+                            </div>
+                        </div>
+                        <div class="down-button-wrapper absolute bottom-0 translate-y-5 w-full flex justify-center">
+                            <div class="bouncing-ball">
+                                <a href="#home">
+                                    <div class="ball-icon h-12 w-12 rotate-180 bg-slate-200/50 rounded-full animate-bounce grid place-content-center hover:bg-slate-400">
+                                        <!-- icon -->
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3" />
+                                          </svg>                              
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="floating-message group drop-shadow-xl fixed bottom-0 flex right-0 m-2 rounded-2xl bg-white/0 font-[WDXL Lubrifont SC]">
+            <a href="mailto:hanscestina@gmail.com" class="flex gap-x-1 bg-white px-2 p-1 rounded-lg group-hover:bg-white/0">
+                <div class="wrapper bg-white p-1 rounded-full">
+                    <img src="../assets/gmail.png" alt="" class="h-10 w-10">
+                </div>
+                <div class="text-wrapper hidden self-center md:block font-[500] text-lg">
+                    Contact me
+                </div>
+            </a>
+        </div>
+    </div>
+</body>
+<script>
+    // mobile menu
+    const toggleBtn = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    toggleBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // loader
+    window.addEventListener("load", () => {
+      const loader = document.getElementById("loader");
+      const content = document.getElementById("content");
+      // After the transition ends, hide the loader and show content
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 500); // Matches the transition duration
+    });
+  </script>
+</html>
